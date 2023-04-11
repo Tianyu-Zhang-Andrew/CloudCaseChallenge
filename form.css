@@ -1,0 +1,59 @@
+html, body{
+	width: 100%;
+	height:100%;
+	margin: 0;
+}
+
+#background {    
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}   
+
+#topbar {
+    width: 100%;
+    background-color: royalblue;
+}
+
+#topbar a {
+    color: white;
+}
+
+#formDiv {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+#form{
+    width: 70%;
+}
+
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.calculationSpan{
+    margin-right: 20px;
+    background: linear-gradient(to right, white,blue) no-repeat right bottom;
+    background-size: 0 2px;
+    transition: background-size 1300ms;
+}
+
+.calculationSpan:hover{
+    cursor: pointer;
+    color: blue;
+    background-position-x: left;
+    background-size: 100% 2px;
+}

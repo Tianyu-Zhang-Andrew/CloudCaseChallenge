@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recruitment Form</title>
+        <link rel="stylesheet" href="./form.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.min.js"></script>
+        <script src="https://rawgit.com/tempusdominus/bootstrap-3/master/build/js/tempusdominus-bootstrap-3.js"></script>
+        <link href="https://rawgit.com/tempusdominus/bootstrap-3/master/build/css/tempusdominus-bootstrap-3.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    </head>  
+    <body>
+        <div id="background">
+            <div id="topbar" class="row sticky-top">
+                <nav class="navbar" style="margin-bottom: 0px;">
+                    <a class="navbar-brand" href="/">
+                        Recruitment Form
+                    </a>
+                </nav>
+            </div>
+
+            <div id="formDiv">
+
+                <form id="form">
+                    <div class="form-row">
+                        <div class="form-group col-md-6" style="padding-left: 0px;">
+                            <label for="FirstName">First name</label>
+                            <input type="text" class="form-control is-valid" id="firstName" placeholder="Enter first name" required>
+                        </div>
+
+                        <div class="form-group col-md-6" style="padding-left: 0px; padding-right: 0px;">
+                            <label for="LastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Enter last name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Gender">Birthday</label>
+                        <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" />
+                            <span class="input-group-addon" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <script>
+                        $(document).ready(function () {
+                            $('#datetimepicker1').datetimepicker({
+                                format: 'MM/DD/YYYY'
+                            });
+                        });
+                    </script>
+
+                    <div class="form-group">
+                        <label for="Gender">Gender</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Choose...</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailAddress">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone number</label>
+                        <input class="form-control" id="phone" placeholder="Enter phone number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inputAddress1">Address 1</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Apartment, studio, or floor">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="1234 Main St" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6" style="padding-left: 0px;">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputCity" required>
+                        </div>
+                        <div class="form-group col-md-4" style="padding-left: 0px;">
+                            <label for="inputState">State</label>
+                            <select id="inputState" class="form-control">
+                                <option>Choose...</option>
+                                <option>NSW</option>
+                                <option>ACT</option>
+                                <option>VIC</option>
+                                <option>TAS</option>
+                                <option>QKD</option>
+                                <option>NT</option>
+                                <option>SA</option>
+                                <option>WA</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2" style="padding-left: 0px; padding-right: 0px;" required>
+                            <label for="inputZip">Zip</label>
+                            <input type="number" class="form-control" id="inputZip">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Picture">Please upload a picture of yours</label>
+                        <input type="file" class="form-control-file" id="picture">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 0px;" has-validation>
+                        <label for="Salary">Salary</label>
+                        <input type="number" class="form-control" id="salaryInput" placeholder="Enter salary" style="margin-bottom: 3px;" required>
+                        <span class="calculationSpan" id="taxCalculation" onclick="handelTaxClick()">Calculate annual tax</span><br/>
+                        <span class="calculationSpan" id="superCalculation" onclick="handelSuperContribClick()">Calculate annual superannuation</span>   
+                    </div>
+
+                    <div id="calculationDiv" style="margin-bottom: 5px; font-weight: bold;">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <script src="./form.js"></script>
+    </body>
+</html>
