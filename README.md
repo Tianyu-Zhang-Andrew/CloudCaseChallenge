@@ -4,7 +4,7 @@ Note: In the calculation, super annuation is calculated as 10.5% * annal income 
 
 Express.js is used to run the project, Bootstrape library is used for the html. 
 
-Testing code is in the test folder, test/calculationTest.js is for testing the correctness of calculations, test/formDisplayTest is for testing related html components are working correctly.
+Testing code is in the test folder, Mocha and Chai are used for testing, test/calculationTest.js is for testing the correctness of calculations, test/formDisplayTest is for testing related html components are working correctly.
 
 Use ```npm install``` to install all packages.
 
